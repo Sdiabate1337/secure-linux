@@ -1,0 +1,13 @@
+DES REGLES A CONFIGURER POUR SON FIREWALL
+
+Ce script configure les règles de iptables pour sécuriser un serveur Linux. Voici une explication détaillée de chaque section du script :
+Reset des règles iptables : Les commandes iptables -F, iptables -X, iptables -t nat -F, iptables -t nat -X, iptables -t mangle -F et iptables -t mangle -X effacent les règles actuelles de iptables.
+Blocage de tout le trafic entrant : Les commandes iptables -P INPUT DROP, iptables -P OUTPUT DROP et iptables -P FORWARD DROP bloquent tout le trafic entrant. Cela signifie que toutes les demandes entrantes seront ignorées, à moins qu'une règle ne soit spécifiée pour les autoriser.
+Autorisation du trafic entrant sur des ports spécifiques : Les commandes iptables -A INPUT -p tcp --port 22 -j ACCEPT, iptables -A INPUT -p tcp --port 80 -j ACCEPT et iptables -A INPUT -p tcp --port 443 -j ACCEPT autorisent le trafic entrant sur les ports 22 (SSH), 80 (HTTP) et 443 (HTTPS).
+Autorisation du trafic entrant à partir d'adresses IP fiables : Les commandes iptables -A INPUT -s 1.2.3.4 -j ACCEPT et iptables -A INPUT -s 5.3.5.1 -j ACCEPT autorisent le trafic entrant à partir des adresses IP 1.2.3.4 et 5.3.5.1.
+Autorisation du trafic entrant à partir de sous-réseaux IP fiables : Les commandes iptables -A INPUT -s 1.0.0.0/8 -j ACCEPT et iptables -A INPUT -s 5.35.0.0/16 -j ACCEPT autorisent le trafic entrant à partir des sous-réseaux IP 1.0.0.0/8 et 5.35.0.0/16.
+Autorisation du trafic sortant vers toutes les destinations : La commande iptables -A OUTPUT -j ACCEPT autorise le trafic sortant vers toutes les destinations.
+Inspection d'état des paquets pour le trafic entrant : La commande iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT active l'inspection d'état des paquets pour le trafic entrant. Cela signifie que les demandes entrantes qui font partie d'une connexion déjà établie seront autorisées.
+Journalisation des paquets abandonnés pour des fins de débogage : Les commandes iptables -N LOGGING, `iptables -A INPUT -j
+
+
