@@ -1,14 +1,14 @@
 
 # Project Title
 
-Le script Bash que nous avons développé est un outil utile pour les administrateurs système qui souhaitent ajouter un nouvel utilisateur avec des privilèges sudo. Le script permet de choisir entre deux options de configuration sudo : un accès complet à toutes les commandes ou un accès limité à des commandes spécifiques. Le script vérifie également la syntaxe du fichier sudoers avant d'appliquer les modifications, et enregistre les changements dans un fichier journal pour une meilleure traçabilité.
+The Bash script we developed is a useful tool for system administrators who want to add a new user with sudo privileges. The script allows the administrator to choose between two sudo configuration options: full access to all commands or limited access to specific commands. The script also checks the syntax of the sudoers file before applying changes and logs the changes to a journal file for better traceability.
 
-Points clés :     
-* Vérification des privilèges d'administration : le script vérifie que l'utilisateur exécute le script en tant que root.
-* Ajout d'un utilisateur : le script permet à l'administrateur de saisir le nom d'utilisateur à ajouter
-* Sélection de la configuration sudo : le script propose deux options de configuration sudo pour l'utilisateur ajouté - accès complet ou accès limité à des commandes spécifiques.
-* Vérification de la syntaxe du fichier sudoers : le script vérifie que la syntaxe du fichier sudoers est correcte avant d'appliquer les modifications.
-* Journalisation des modifications : le script enregistre les modifications apportées au fichier sudoers dans un fichier journal pour une meilleure traçabilité
+Key points:    
+* Admin privileges verification: The script checks that the user is running the script as root.
+* Adding a user: The script allows the administrator to enter the username to be added.
+* Selecting sudo configuration: The script offers two sudo configuration options for the added user - full access or limited access to specific commands.
+*Sudoers file syntax verification: The script checks that the syntax of the sudoers file is correct before applying changes
+* Logging of changes: The script logs changes made to the sudoers file to a journal file for better traceability.
 
-Ce script est donc un outil utile pour les administrateurs système qui cherchent à automatiser l'ajout d'utilisateurs avec des privilèges sudo, tout en assurant la sécurité et la traçabilité des modifications apportées au fichier sudoers.
+Therefore, this script is a useful tool for system administrators who are looking to automate the addition of users with sudo privileges, while ensuring the security and traceability of changes made to the sudoers file
 
