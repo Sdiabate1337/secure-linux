@@ -1,5 +1,5 @@
 
-# Project Title
+# Sudo config automaion script
 
 The Bash script we developed is a useful tool for system administrators who want to add a new user with sudo privileges. The script allows the administrator to choose between two sudo configuration options: full access to all commands or limited access to specific commands. The script also checks the syntax of the sudoers file before applying changes and logs the changes to a journal file for better traceability.
 
