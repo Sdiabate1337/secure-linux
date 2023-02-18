@@ -8,7 +8,7 @@ This script requires administrative privileges to run. The user executing the sc
 ## How to Use
 * Download the script to your local machine.
 * Open the terminal and navigate to the directory where the script is saved.
-* Run the script with the following command: sudo ./add_user_to_sudoers.sh
+* Run the script with the following command: sudo ./sudo_config.sh
 * Follow the prompts to add a user to the sudoers file.
 
 ## Script Functionality
