@@ -4,7 +4,7 @@ This script is used to reset the IPtables rules and set up a basic firewall conf
 ## Usage
 To use this script, simply run it with root privileges:
 ```
-sudo bash iptables_rules.sh
+sudo bash fw_config.sh
 ```
 
 ## Rules
